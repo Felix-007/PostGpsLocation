@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         android:layout_centerInParent="true"
+        android:clickable="true" />
+   <LinearLayout
+        android:id="@+id/route1_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0EEE0"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="邮路名：" />
+
+		<TextView 
+		    android:id="@+id/ylmc"
+		    android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+		    />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/route2_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/route1_layout"
+        android:background="#E0EEE0"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="终点：" />
+
+            <Spinner 
+            android:id="@+id/end_et"
+  			android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+    		>
+
+            <requestFocus />
+			</Spinner>
+     
+    </LinearLayout>
+  
+
+	   <Button 
+	       android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_nav_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentRight="true"
+       		android:layout_alignParentTop="true"
+       	 	android:layout_marginRight="10dp"
+       	 	android:layout_marginTop="13dip"
+            android:text="导航"/>
+	   
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/route2_layout"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

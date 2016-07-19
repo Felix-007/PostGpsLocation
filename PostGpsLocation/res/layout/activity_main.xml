@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/hybg"
+        android:paddingTop="25dp"
+         >
+       <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+		android:layout_gravity="center"
+		
+        />
+         <TextView
+        android:id="@+id/dwtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+		android:layout_gravity="center"
+        />
+       </LinearLayout>
+       
+    <Button 
+        android:id="@+id/dolocation"
+          android:layout_marginTop="10dp"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:text="基础定位功能"
+         android:textColor="@drawable/selector_fontcolor"
+        />
+
+        <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:src="@drawable/zhuce_line" />
+        
+       <TextView 
+           android:id="@+id/routeInfo"
+           android:layout_marginTop="10dp"
+       	   android:layout_width="wrap_content"
+       	   android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:textStyle="bold"
+           android:textSize="18sp"
+           android:text="邮路信息:加载中…"
+           />
+       
+       	<com.example.postgpslocation.view.ScrollUpdateListView
+    	    android:id="@+id/ZDListView"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:scrollbars="vertical"
+    	    android:layout_marginTop="10dp"
+    	    />
+       	
+       
+       	
+       
+</LinearLayout>

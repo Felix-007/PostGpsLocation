@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.postgpslocation"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="20" />
+	
+	   <!-- 这个权限用于进行网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<!-- 这个权限用于访问GPS定位-->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<!-- 用于读取手机当前的状态-->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<!-- 访问网络，网络定位需要上网-->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<!-- SD卡读取权限，用户写入离线定位数据-->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+     <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 摄影机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    
+    <application
+        android:name="com.example.postgpslocation.activity.LocationApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+		</service>
+		  <service android:name="com.example.postgpslocation.service.SocketService">
+		
+		</service>
+		
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="zH1XD4diA1OMOC7HjfTRW4Mp" />  
+        
+        <activity
+            android:name="com.example.postgpslocation.activity.RegisterActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.postgpslocation.activity.LocationActivity" android:launchMode="singleInstance"></activity>
+        <activity android:name="com.example.postgpslocation.activity.LocationOption"></activity>
+        <activity android:name="com.example.postgpslocation.activity.LoginActivity"></activity>
+        <activity android:name="com.example.postgpslocation.activity.MainActivity"></activity>
+        <activity android:name="com.example.postgpslocation.activity.RoutePoint"></activity>
+    
+          <activity
+            android:name="com.example.postgpslocation.activity.BNDemoGuideActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/login_bg" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal" >
+
+         <ImageView
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/phonenum" />
+        
+        
+        <EditText
+            android:id="@+id/telephonenumRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            android:hint="请输入手机号"
+            android:inputType="phone" />
+        
+
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+    
+              <ImageView
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/icon_chepaihao" />
+        
+        
+        <EditText
+            android:id="@+id/cphnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            android:hint="车牌号"
+             />
+    </LinearLayout>    
+    
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60px"
+        android:src="@drawable/zhuce_line" />
+
+    <Button
+        android:id="@+id/registerRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_login" />
+
+</LinearLayout>

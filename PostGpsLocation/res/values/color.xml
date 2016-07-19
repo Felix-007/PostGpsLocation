@@ -1,0 +1,6 @@
+<resources>  
+  
+    <color name="software_textColor_selected">#ffffff</color>  
+    <color name="software_textColor_unselected">#0eb09d</color>  
+      
+</resources>  
